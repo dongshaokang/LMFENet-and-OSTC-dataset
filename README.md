@@ -1,2 +1,3 @@
-# Oil-spill-classification-benchmark-dataset
-The dataset will be made publicly available upon request. This ensures that other researchers can access the data for validation, replication, and further studies, promoting transparency and reproducibility in the research community.
+# Experimental Setup
+
+First, we utilized the constructed OSTC dataset to evaluate the performance of the model. The OSTC dataset consists of 3,879 labeled samples, which are divided into training and testing sets in an 8:2 ratio, with the training set consisting of 3,098 images and the testing set containing 781 images. All images are resized to $512 \times 512$ and no data augmentation is applied during training. Second, all experiments are conducted on an NVIDIA 4070 Ti GPU using PyTorch. Third, we utilize ResNet50 as the backbone architecture, and the model is trained using the Adam optimizer with an initial learning rate of 0.0001. The learning rate is adjusted dynamically, decreasing as the number of epochs increases. The batch size is set to 16, and the total number of training epochs is 200.
